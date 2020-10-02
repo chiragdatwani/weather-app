@@ -27,7 +27,7 @@
 
 body{
     height: 97vh;
-    background: url('./images/23284.jpg');
+    background: url('./Assets/images/23284.jpg');
     background-size:     cover;          
     background-repeat:   no-repeat;
     background-position: center center;
@@ -106,7 +106,7 @@ body{
 
 
 .weather-card{
-    background: url(./images/card.jpg);
+    background: url('./Assets/images/card.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     color: black;

@@ -72,7 +72,7 @@ async function getWeather(city) {
 //To fetch cities from local json file and update the suggestion list, as the user types in the search bar
 
 async function getCityList() {
-  const response = await fetch("./cities.json");
+  const response = await fetch("Assets/Cities/cities.json");
   const cityList = await response.json();
 
   updateCityList(cityList);
