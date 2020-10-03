@@ -12,17 +12,16 @@ const apiKey = "7ee53c6929dacc7f043f92a2e9fc4fc4";
 //Event Listeners
 
 searchButton.addEventListener("click", function () {
-    getWeather(cityInput.value);
-  });
-  
-  cityInput.addEventListener("input", getCityList);
-  
-  cityInput.addEventListener("click", function () {
-    if (display.style.display != "none") {
-      cityInput.value = "";
-    }
-  });
-  
+  getWeather(cityInput.value);
+});
+
+cityInput.addEventListener("input", getCityList);
+
+cityInput.addEventListener("click", function () {
+  if (display.style.display != "none") {
+    cityInput.value = "";
+  }
+});
 
 //function to fetch weather update from the Open Weather Map api
 
@@ -67,6 +66,16 @@ async function getWeather(city) {
         </div>    
     </div>
     </div>`;
+
+  setTimeout(() => {
+    if (window.speechSynthesis) {
+      var speech = new SpeechSynthesisUtterance();
+      speech.text = `It is currently ${Math.floor(
+        currentWeather.main.temp - 273
+      )} degree Celsius in ${currentWeather.name}`;
+      window.speechSynthesis.speak(speech);
+    }
+  }, 1000);
 }
 
 //To fetch cities from local json file and update the suggestion list, as the user types in the search bar
