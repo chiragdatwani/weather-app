@@ -10,34 +10,26 @@
 </head>
 <body>
     <div class="header">
-    <h1 class="title"><i class="fa fa-cloud"></i> weatherApp</h1>
+        <h1 class="title"><i class="fa fa-cloud"></i> weatherApp</h1>
     </div>
-    <div class="container d-flex flex-column justify-content-center align-items-center pt-3" >
-        <div class = "search d-flex justify-content-center" >
-    <input type="text" class="search-city" placeholder="Search City">
-    <button class="get-update"> <i class="fa fa-search"></i></i></button>
-   
-
+    <div class="main">
+        <div class="search" >
+            <form class='search-form'>
+            <input type="text" class="search-city" placeholder="Search City">
+            <button type='submit' class="get-update"> <i class="fa fa-search"></i></i></button>
+            </form>
         </div>
-    <div class="display">
-    
-    </div>
-    
+    <div class="display"></div>
     <ul class="list-group search-list" style="width: 500px;">
-    
-      </ul>
-    </div>
-
+    </ul>
+    </div> 
     <footer>
         <div class="footer">
             <p>&copy; Chirag Datwani</p>
-            <p>Powered By OpenWeatherMap.org</p>
+            <p class="owm">Powered By OpenWeatherMap.org</p>
         </div>
     </footer>
     <script src="app.js"></script>
     <script src="https://raw.githubusercontent.com/IDMNYU/p5.js-speech/master/lib/p5.speech.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>

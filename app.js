@@ -3,7 +3,7 @@ console.log("live");
 //get element form the dom
 
 const cityInput = document.querySelector(".search-city");
-const searchButton = document.querySelector(".get-update");
+const searchForm = document.querySelector(".search-form");
 const display = document.querySelector(".display");
 const searchUL = document.querySelector(".search-list");
 // API Key
@@ -11,7 +11,8 @@ const apiKey = "7ee53c6929dacc7f043f92a2e9fc4fc4";
 
 //Event Listeners
 
-searchButton.addEventListener("click", function () {
+searchForm.addEventListener("submit", function (e) {
+  e.preventDefault();
   getWeather(cityInput.value);
 });
 
@@ -46,7 +47,7 @@ async function getWeather(city) {
       currentWeather.main.temp - 273
     )}ºC</h1></div>
     <div style="min-height: 10px;"></div>
-    <p class="main">${currentWeather.weather[0].main}</p>
+    <p class="desc">${currentWeather.weather[0].main}</p>
     <div class="other">
         <div class="min-max">
             <div class="max-temp"><p>Max: ${Math.floor(
@@ -75,7 +76,7 @@ async function getWeather(city) {
       )} degree Celsius in ${currentWeather.name}`;
       window.speechSynthesis.speak(speech);
     }
-  }, 1000);
+  }, 700);
 }
 
 //To fetch cities from local json file and update the suggestion list, as the user types in the search bar
